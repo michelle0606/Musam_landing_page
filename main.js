@@ -5,6 +5,8 @@ const offer = document.getElementById('offer')
 
 imgs.forEach(img => {
   img.addEventListener('mouseenter', e => {
+    e.stopPropagation()
+    e.preventDefault()
     const parentDiv = e.target.parentNode
     img.classList.add('visible')
     parentDiv.classList.remove('transition', 'zoomOut')
@@ -12,6 +14,24 @@ imgs.forEach(img => {
   })
 
   img.addEventListener('mouseleave', e => {
+    e.stopPropagation()
+    e.preventDefault()
+    const parentDiv = e.target.parentNode
+    parentDiv.classList.add('transition', 'zoomOut')
+    parentDiv.classList.remove('transition', 'zoomIn')
+  })
+  img.addEventListener('touchstart', e => {
+    e.stopPropagation()
+    e.preventDefault()
+    const parentDiv = e.target.parentNode
+    img.classList.add('visible')
+    parentDiv.classList.remove('transition', 'zoomOut')
+    parentDiv.classList.add('transition', 'animated', 'zoomIn')
+  })
+
+  img.addEventListener('touchend', e => {
+    e.stopPropagation()
+    e.preventDefault()
     const parentDiv = e.target.parentNode
     parentDiv.classList.add('transition', 'zoomOut')
     parentDiv.classList.remove('transition', 'zoomIn')
