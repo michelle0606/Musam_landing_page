@@ -98,6 +98,7 @@ header {
 
 main {
   max-width: 900px;
+  margin: auto;
   margin-top: 20px;
   margin-bottom: 60px;
   display: grid;
@@ -106,7 +107,7 @@ main {
 
 main > .tips {
   position: absolute;
-  width: 100vw;
+  width: 100%;
   text-align: center;
 }
 main .tips h1 {
