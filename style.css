@@ -389,6 +389,7 @@ footer {
 .right-arrow {
   transform: rotate(90deg);
   width: 50px;
+  display: none;
 }
 
 .start {
@@ -446,6 +447,11 @@ footer {
   }
   #three-dessert > .three-dessert-wrapper {
     flex-flow: row;
+  }
+  .right-arrow {
+    transform: rotate(90deg);
+    width: 50px;
+    display: block;
   }
 }
 
